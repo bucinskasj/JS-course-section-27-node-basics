@@ -7,7 +7,7 @@ const server = http.createServer((request, response) => {
   });
   request.on('end', () => {
     body = Buffer.concat(body).toString();
-    let userName = 'Unknown user'
+    let userName = 'Unknown user';
     if (body) {
       userName = body.split('=')[1];
     }
